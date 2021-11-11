@@ -1,0 +1,124 @@
+.title {
+  @extend %start-2p;
+  font-size: 18px;
+  text-align: center;
+  color: $text-color;
+  margin-bottom: 20px;
+}
+
+.about {
+  padding-top: 20px;
+  max-width: 1300px;
+  margin: 0 auto 20px auto;
+}
+
+.about__title {
+  color: $main-red;
+   @extend %start-2p;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.about__wrapper {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 20px -20px 0 0;
+}
+.hexagon-wrap {
+  filter: drop-shadow(5px 14px 3px #ff111d5e);
+}
+
+.hexagon {
+  background: $main-red;
+  position: relative;
+  width: 300px;
+  height: 255px;
+  box-shadow: 0 0 100px rgba(250,17,28,0.8);
+  margin-bottom: 20px;
+  margin-right: 25px;
+}
+
+.hexagon::before {
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  box-shadow: 0 0 100px rgba(250,17,28,0.8);
+  background:url(http://webneel.com/daily/sites/default/files/images/daily/09-2014/6-nature-photography-pedraterrinha.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+
+.hexagon,
+.hexagon::before {
+  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+  box-shadow: 0 0 100px rgba(250,17,28,0.8);
+}
+
+.hexagon::after {
+  box-shadow: 0 0 100px rgba(250,17,28,0.8);
+}
+.hexagon .img__wrapper {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.7s;
+  opacity: 0;
+}
+.img {
+  // position: relative;
+  width: 42px;
+  height: 42px;
+  // top: 50%;
+  // left: 50%;
+  // transform: translate(-50%, -50%);
+}
+.hexagon .img__wrapper:hover {
+  opacity: 1;
+  visibility: visible;
+}
+.hexagon:hover .img__wrapper{
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 5;
+}
+.img__link{
+  // height: 42px;
+  background-color: #ff111d50;
+  padding: 5px;
+  display: block;
+  border-radius: 5px;
+  opacity: 0.75;
+  transition: $linear;
+  &:hover{
+    opacity: 1;
+    scale: 1.1;
+  }
+}
+.hexagon__links-wrapper{
+  //   box-sizing: border-box;
+  width: 170px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.7s;
+}
+.about__card__title {
+  margin-right: 25px;
+  margin-bottom: 10px;
+}
+.about__card__text{
+  @extend %start-2p;
+  font-size: 14px;
+  text-align: center;
+  color: $text-color;
+  margin-right: 25px;
+  margin-bottom: 20px;
+}
